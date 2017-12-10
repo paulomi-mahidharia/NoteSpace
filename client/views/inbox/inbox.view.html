@@ -1,0 +1,63 @@
+<div class="main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2"  ng-controller="InboxController as model">
+    <h1 style="color: darkorange">Received Notes</h1>
+    <div style="float: right">
+
+        <button class="btn btn-default"
+                ng-hide="hideDeleteButton==1"
+                ng-click="showDelete = 1; showHideDeleteButton = 1; showColumn = 1;
+                          hideDeleteButton = 1;showTableAdd = 2; showTable = 2; showPencil = 2; showStar = 2">
+
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+
+        <button class="btn btn-default"
+                ng-show="showHideDeleteButton==1"
+                ng-click="hideDeleteButton = 2; showDelete = 2; showHideDeleteButton = 2; showColumn = 2">
+
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+
+        <!-- share -->
+
+
+    </div>
+    <br/>
+
+
+    <p>Notes shared with you!</p>
+
+
+    <div class="table-responsive darker padding-all-sides" >
+        <table class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+
+            <tbody>
+
+
+            <tr ng-repeat="note in model.receivedNotes">
+                <td>
+                    <a href="#/previewnote/{{note._id}}"><h3>{{note.title}}</h3></a>
+                    <br/>
+                    Notebook of {{note.title}} : {{note.notebook}}
+                </td>
+                <td ng-show="showColumn==1">
+                    <button class="btn btn-default"
+                            ng-click="model.deleteReceivedNoteForUser($index)"
+                            ng-show="showDelete==1">
+                        <span
+                                class="glyphicon glyphicon-remove "
+                                aria-hidden="true">
+                        </span>
+                    </button>
+
+
+
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+
+
+    </div>
+</div>

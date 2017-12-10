@@ -1,0 +1,42 @@
+
+<div class=" main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2"
+     ng-controller="ImageController as model">
+    <h1 style="color: darkorange">Upload Image to Note</h1><br>
+
+    <div id="imageEdit" style="display: none">
+
+    </div>
+
+    <div>
+        URL
+        <input ng-model="model.widget.image.url" class="form-control"/>
+        <br/>
+
+        <button class="btn btn-block btn-orange"  
+           ng-click="model.addImage(model.widget)">
+                ADD IMAGE VIA URL          
+        </button>
+        <br/>
+
+        <center><h1>OR</h1></center>
+        <br/>
+
+        Upload
+        <form action="/api/upload"
+              method="post"
+              enctype="multipart/form-data">
+
+            <input name="noteId" value="{{model.noteId}}" style="display: none"/>
+            <input name="widgetId" value="{{model.widgetId}}" style="display: none"/>
+            <input name="widgetType" value="IMAGE" style="display: none"/>
+            <input name="source" value="docUpload" style="display: none"/>
+
+            <input  type="file" name="myFile" class="form-control"/><br/>
+            <button type="submit" class="btn btn-block btn-orange">
+                Upload Image
+            </button>
+        </form>
+
+    </div>
+
+</div>

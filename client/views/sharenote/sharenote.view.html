@@ -1,0 +1,87 @@
+<div class="main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2 table-responsive"
+        ng-controller="ShareNoteController as model">
+
+    <h1>Share {{model.noteToBeShared.title}} with selected user</h1><br><br>
+
+        <div style="float: right">
+            <a href="#/group">
+            <button class="btn btn-default"
+                    ng-click= "s =1" >
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
+            </a>
+        </div>
+
+    <br><br><br>
+    <div style="float: left; width: 40%">
+
+
+        <h3>Members</h3>
+
+        <table class="table table-bordered table-striped" border="3" style="border-collapse:collapse" >
+
+            <caption>Search by username:
+                <input class="form-control" type="text" ng-model="search.username"
+                       style="background-color: transparent">
+            </caption>
+
+            <tbody>
+
+                <tr ng-repeat="user in model.toShareUsers| filter:search">
+                    <td>
+                        <h3>{{user.username}}</h3>
+                        <br/>
+
+                    </td>
+                    <td>
+                        <button class="btn btn-default"
+                                ng-click="model.shareNoteWithUser(model.noteToBeShared, user)">
+
+                        <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+
+                        </button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div style="float: right; width: 40%">
+
+        <h3>Your Groups</h3>
+
+        <table class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+
+            <caption> Search by groupname:
+
+                <input type="text" class="form-control" ng-model="search1.title"
+                style="background-color: transparent">
+
+            </caption>
+
+            <tbody>
+
+                <tr ng-repeat="group in model.toShareGroups| filter:search1">
+
+                    <td>
+                        <a href="#group/{{group._id}}/viewGroup">   <h3>{{group.title}}</h3> </a>
+                    <!--    <h5>Members of group</h5>
+                        <ul ng-repeat="user1 in group.members" >
+                            <li><b>-></b> {{user1}} </li>
+                        </ul> -->
+                    </td>
+
+                    <td><button class="btn btn-default"
+                                ng-click="model.shareNoteWithGroup(model.noteToBeShared, group)" >
+
+                        <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+
+                    </button></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2 main">
+    <h1 style="color: darkorange">Text Editor</h1><br>
+
+
+    <div class="table-responsive darker padding-all-sides" >
+        <table class="table table-bordered table-striped" ng-controller="TextEditorController as model">
+            <thead>
+            <tr>
+                <th>
+
+                    Enter Note Text...
+                </th>
+
+                <th>
+
+                    Action
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div text-angular
+                         ng-model="model.widget.html.text">
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-default" id="add"
+                            ng-click="model.addText(model.widget)">
+
+                        <span class="glyphicon glyphicon-plus"
+                              aria-hidden="true">
+                        </span>
+                    </button>
+
+                    <button ng-click="model.cancelText(model.widget)"
+                       class="btn btn-default">
+                        <span
+                              class="glyphicon glyphicon-remove "
+                              aria-hidden="true">
+                        </span>
+                    </button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

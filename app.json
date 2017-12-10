@@ -1,0 +1,8 @@
+{
+  "name": "Note Maker",
+  "description": "Note maker application for sharing notes with different widgets",
+  "repository": "https://github.com/paulomi-mahidharia/paulmahi",
+  "logo": "https://mlab.com/company/brand/resources/mLab-logo-onlight.png",
+  "keywords": ["node", "express", "angular", "MEAN", "mongodb", "REST", "API"],
+  "addons": ["mongolab"]
+}

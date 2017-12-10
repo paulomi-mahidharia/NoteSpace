@@ -1,0 +1,48 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="MapController as model">
+    <h1>Search Location</h1><br>
+    <div style="float: right">
+        <button class="btn btn-default"
+                ng-click="model.updateMap()">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        <button ng-click="model.cancelMap()"
+                class="btn btn-default">
+                        <span
+                                class="glyphicon glyphicon-remove "
+                                aria-hidden="true">
+                        </span>
+        </button>
+    </div>
+    <div>
+        <label for="Autocomplete">Autocomplete Search</label>
+        <i class="glyphicon glyphicon-map-marker left"></i>
+        <input id="Autocomplete" ng-model="result1" class="form-control" style="background: transparent"/>
+        <br/>
+        <button ng-click="search()" class="btn btn btn-orange btn-block">Search</button>
+    </div>
+    <br/>
+
+    <div id="map" style="height:300px; width: 100%"></div>
+
+
+    <div class="table-responsive">
+        <table class="table table-stripped">
+            <tr ng-repeat="address in data">
+                <td>
+                    <center><h3>{{address.formatted_address}}</h3><br/>
+                        <ul>
+                            <li>
+                                Lattitude: {{address.geometry.location.lat}}
+                            </li>
+                            <li>
+                                Longitude: {{address.geometry.location.lng}}
+                            </li>
+                        </ul></center>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>

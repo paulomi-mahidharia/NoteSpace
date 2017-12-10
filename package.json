@@ -1,0 +1,41 @@
+{
+  "name": "FormService",
+  "version": "1.0.0",
+  "description": "A MEAN app that allows users to create, manage and share notes containing different widgets.",
+  "keywords": [
+    "node",
+    "express",
+    "angular",
+    "MEAN",
+    "mongodb",
+    "REST",
+    "API"
+  ],
+  "author": {
+    "name": "Paulomi",
+    "email": "p.mahi257@gmail.com",
+    "url": "https://paulomi-mahidharia.github.io"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "express": "~3.4.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.10.8",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "q": "^1.4.1",
+    "uuid": "^3.1.0"
+  },
+  "private": true,
+  "main": "server.js"
+}

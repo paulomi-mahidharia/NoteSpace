@@ -1,0 +1,136 @@
+<!--<div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+        <li ng-class="{'active': $location.url() == '/home'}"><a href="#/home">   Home </a></li>
+        <li ng-class="{'active': $location.url() == '/profile'}"><a href="#/profile">   Profile</a></li>
+        <li ng-class="{'active': $location.url() == '/note'}"><a href="#/note">   Notes</a></li>
+        <li ng-class="{'active': $location.url() == '/forms'}"><a href="#/forms">   Google Map API</a></li>
+        <li ng-class="{'active': $location.url() == '/textedit'}"><a href="#/textedit">   Text Editor</a></li>
+    </ul>
+</div>-->
+<br/></br>
+<div id="wrapper" ng-controller="HeaderController as model" >
+
+
+    <div id="sidebar-wrapper" ng-show="currentUser" >
+        <br>
+        <br>
+        <br>
+        <ul class="sidebar-nav text-uppercase" >
+            <br>
+            <br>
+            <br>
+
+            <li>
+                <a href="#/createnote" >
+                    <span id="plus" class="glyphicon glyphicon-plus"></span>
+                        <span style="padding-left: 5px">CREATE NOTE</span>
+                </a>
+            </li>
+            <li>
+              <a href="#/search">
+                    <span class="glyphicon glyphicon-search"></span>
+                    <span style="padding-left: 5px">SEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/favorites">
+                    <span class="glyphicon glyphicon-heart"></span>
+                    <span style="padding-left: 5px">FAVORITES</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/note">
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                    <span style="padding-left: 5px">NOTES</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/notebook">
+                    <span class="glyphicon glyphicon-book"></span>
+                    <span style="padding-left: 5px">NOTEBOOKS</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/group">
+                    <span class="glyphicon glyphicon-globe"></span>
+                    <span style="padding-left: 5px">GROUPS</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/inbox">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    <span style="padding-left: 5px">INBOX</span>
+                </a>
+            </li>
+
+            <!-- ---------------------------------- -->
+            <hr style="color: black; border-width: 2px; border-color: darkorange">
+
+            <li>
+                <a href="#/home"  ng-hide="currentUser">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <span style="padding-left: 5px">HOME</span>
+            </li>
+
+            <li ng-class="{'active': model.$location.url() == '/register'}" ng-hide="currentUser">
+                <a href="#/register" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span style="padding-left: 5px">CREATE ACOUNT</span>
+                </a>
+            </li>
+
+            <li ng-class="{'active': model.$location.url() == '/login'}" ng-hide="currentUser">
+                <a href="#/login" >
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    <span style="padding-left: 5px">SIGN IN</span>
+                </a>
+            </li>
+            <li ng-show="currentUser">
+                <a href="#/home"  ng-click="model.logout()">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    <span style="padding-left: 5px">LOGOUT</span>
+                </a>
+            </li>
+
+            <li ng-class="{'active': model.$location.url() == '/profile'}" ng-show="currentUser">
+                <a href="#/profile">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span style="padding-left: 5px">{{currentUser.username}}</span>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+    </div>
+    <script type="text/javascript">
+
+
+
+
+        $("#menu-toggle")
+                .click(function(e) {
+            $("#wrapper").toggleClass("toggled");
+        });
+
+
+
+
+        $("#wrapper")
+                .click(function(e) {
+
+
+                    if ($(window).width() < 767) {
+                        $("#wrapper").toggleClass("toggled");
+                                //
+                    } else {
+                        $("#wrapper").show();
+                    }
+                });
+
+
+
+    </script>
+</div>
+
+<!-- e.preventDefault(); -->

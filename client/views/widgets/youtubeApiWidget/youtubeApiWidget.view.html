@@ -1,0 +1,64 @@
+
+
+<div class ="main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2"
+     ng-controller="YouTubeController as model">
+
+    <h1 style="color: darkorange">Search Video</h1>
+
+    <div class="table-responsive darker padding-all-sides" >
+
+            <input id="VideoName"
+                   class="form-control"
+                   placeholder="Enter key word for video"
+                   ng-model="model.widget.youtube.keyword"><br/>
+
+            <button id="SearchVideoTitle"
+                    class="btn btn-orange btn-block"
+                    ng-click="model.searchVideo(model.widget)">
+
+                Search Video
+
+            </button>
+
+            <div id="searchResults" style="display: none">
+
+                <h2>Related Videos</h2>
+
+                <table id="results"
+                   class="table table-bordered table-striped"
+                   border="3"
+                   style="border-collapse:collapse">
+
+                    <thead>
+                    <tr>
+                        <th>Videos</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr ng-repeat="url in model.urls">
+                        <td>
+                            <iframe width="250" height="250"
+                                    ng-src="{{model.SafeYoutubeUrl(url)}}">
+                            </iframe>
+                        </td>
+                        <td>
+                            <button class="btn btn-default"
+                                    ng-click="model.addVideo($index)">
+
+                            <span
+                                    class="glyphicon glyphicon-plus"
+                                    aria-hidden="true">
+                            </span>
+                            </button>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+</div>

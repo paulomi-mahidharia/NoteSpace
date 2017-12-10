@@ -1,0 +1,116 @@
+<div class="main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2"
+      ng-controller="GroupController as model">
+
+    <h2 style="color: darkorange">Groups Of  {{currentUser.username}}</h2>
+
+    <a href="#/createGroup">
+
+        <div style="float: right">
+            <button class="btn btn-default"
+                    ng-click= "s =1" >
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+
+    </a>
+
+    <h3  style="color: orange" ng-show="showrest==1">Group Name: {{model.group.title}}
+
+        <button class="btn btn-default"
+                ng-click="model.editGroupForUser(model.group); showrest = 1" >
+
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </button><br>
+
+    </h3>
+
+
+    <p>All groups of {{currentUser.username}}  </p>
+
+    <br/>
+
+    <div class="table-responsive wrapper " >
+
+
+
+
+
+        <div id="one" >
+
+            <table  class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+                <caption>
+                    <h4>User is member</h4>
+                    <h5>Select to view Group </h5>
+
+                </caption>
+
+                <tbody>
+
+                    <tr>
+                        <th>Group Name</th>
+                        <th>Action</th>
+                    </tr>
+
+                    <tr ng-repeat="groupM in model.MemberGroups">
+
+                        <td>
+                            <a href="#group/{{groupM._id}}/viewGroup"> <h4> {{groupM.title}}</h4> </a>
+
+                        </td>
+
+                        <td>
+                            <button class="btn btn-default"
+                                    ng-click="model.LeaveGroup($index)">
+                                    <span>
+                                        Leave Group
+                                    </span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="two">
+
+            <table  class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+
+                <caption>
+                    <h4>User is admin</h4>
+                    <h5>Select to edit Group </h5>
+
+                </caption>
+
+                <tbody>
+                <tr>
+                    <th>Group Name</th>
+                    <th>Action</th>
+                </tr>
+                </tbody>
+
+                <tr ng-repeat="groupA in model.AdminGroups">
+                    <td>
+                        <a href="#group/{{groupA._id}}/editGroup"> <h4>{{groupA.title}}</h4> </a>
+
+                    </td>
+
+                    <td>
+                        <button class="btn btn-default"
+                                ng-click="model.deleteGroup($index)">
+                                    <span>
+                                        Delete Group
+                                    </span>
+                        </button>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+   </div>
+
+</div>
+
+
+

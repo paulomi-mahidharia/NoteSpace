@@ -1,0 +1,133 @@
+<div class="main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2"
+     ng-controller="GroupController as model">
+
+
+    <h1 style="color: darkorange">Create Group</h1>
+
+    <a href="#/group">
+
+        <div style="float: right">
+            <button class="btn btn-default"
+                    ng-click= "s =1" >
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
+        </div>
+
+    </a>
+
+    <h3  style="color: orange" ng-show="showrest==1">Group Name: {{model.group.title}}
+
+        <button class="btn btn-default"
+                ng-click= "showedit = 1" >
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </button>
+    </h3>
+
+    <br/>
+
+    <table  class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+
+        <tr ng-show="showedit==1">
+
+            <td><b>Enter New Name for Group :</b><br/>
+                <input type="text"
+                       class="form-control"
+                       ng-model = "model.group.title"
+                       id="name" placeholder="Group Title">
+            </td>
+
+            <td>
+                <button class="btn btn-default"
+                        ng-click="model.renameGroup(model.group.title); showrest = 1; showedit=2" >
+                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                </button>
+            </td>
+
+        </tr>
+    </table>
+
+    <p>Admin can add users to groups</p>
+    <br/>
+
+    <div class="table-responsive darker padding-all-sides" >
+        <table  class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+
+            <tbody>
+            <tr ng-hide="showrest==1">
+
+                <td><b>Enter Name for Group :</b><br/> <input type="text" class="form-control"
+                                                              ng-model = "model.group.title"
+                                                              id="name" placeholder="Group Title">
+
+
+
+                </td>
+
+                <td>
+                    <button class="btn btn-default"
+                            ng-click="model.createGroupForUser(model.group);showrest = 1" >
+                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                    </button>
+                </td>
+
+            </tr>
+
+            <tr ng-show="showrest==1" ng-show="showedit != 1">
+                <td><b>Select users to add to the group:</b>
+
+                    <select name="new-member" id="new-membe" class="form-control"
+                            ng-model="model.userToBeAddedToGroup"
+                            ng-options="option.username for option in model.allusers track by option._id"
+                            ng-init="model.options[0]"
+                            ng-change="changedValue(model.userToBeAddedToGroup)">
+
+                        <option value="{{option._id}}">{{option.username}}</option>
+
+                    </select>
+
+                </td>
+
+                <td><button class="btn btn-default"
+                            ng-click="model.addMemberToGroup(model.userToBeAddedToGroup); showusers=1">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+        </br>
+        <br/>
+
+        <table  class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" ng-show="showusers==1">
+
+            <tbody>
+            <tr>
+                <th>User Name</th>
+                <th>Action</th>
+            </tr>
+
+            <tr ng-repeat="user in model.usersOfCurrentGroup">
+                <td>
+                    <h3>{{user.username}}</h3>
+
+                </td>
+                <td>
+                    <button class="btn btn-default"
+                            ng-click="model.deleteMemberFromGroup($index)"
+                    >
+                                <span
+                                        class="glyphicon glyphicon-remove "
+                                        aria-hidden="true">
+                                </span>
+                    </button>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

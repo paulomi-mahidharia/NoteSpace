@@ -1,0 +1,57 @@
+<div class="main col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2">
+
+    <h1>View Notebook: {{model.viewNotebook.name}}</h1>
+    <h4>Description: {{model.viewNotebook.description}}</h4>
+
+
+    <div style="float: right">
+        <button class="btn btn-default" onclick="goBack()"  ng-click= "s =1">
+            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+    <br/>
+
+    <p>Note book contains notes</p>
+    <br/>
+
+    <div class="table-responsive darker padding-all-sides" >
+
+        <table  class="table table-bordered table-striped"   border="3" style="border-collapse:collapse" >
+
+
+            <tbody>
+            <tr>
+                <th>Notes Of Notebook</th>
+            </tr>
+
+
+            <tr ng-repeat="note in model.notesOfCurrentNotebook">
+
+                <td>
+                    <a href="#previewnote/{{note._id}}">
+
+                        <h3>{{note.title}}</h3>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+
+
+
+
+    </div>
+</div>
+
+
+

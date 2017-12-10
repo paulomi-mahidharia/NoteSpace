@@ -1,0 +1,4 @@
+[ {"id": 1, "name":"note1", "notebook": "notebook1", "likedBy":["123", "234"], "createdBy":"123"},
+  {"id": 2, "name":"note2", "notebook": "notebook2", "likedBy":["123"], "createdBy":"234"},
+  {"id": 3, "name":"note3", "notebook": "notebook3", "likedBy":["456"], "createdBy":"123"}
+]

@@ -1,0 +1,616 @@
+<div id="home-page" xmlns="http://www.w3.org/1999/html">
+
+
+
+    <header id="myCarousel" class="header-wrapper home-parallax home-fade carousel slide">
+
+        <!--<div class="header-overlay">>
+        <!-- Carousel-->
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../../assets/img/note2.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Create notes with fabulous widgets</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../../assets/img/note5.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Save, share and maintain your data</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../../assets/img/note2.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Share your notes with your friends</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+        <!--Carousel-->
+
+
+
+        <div class="header-wrapper-inner">
+
+
+            <div class="container">
+
+                <div>
+                    <form>
+                        <div class="row ">
+
+                            <div class="col-lg-9 col-sm-offset-2 welcome-speech center-align" style="align-self: center">
+                                <br/><br/><br/><br/><br/><br/><br/>
+                                <h1><b>Create your own Note space</b></h1>
+                                <p><b>“Organized notes are less perishable than gray matter”</b></p>
+                                <br/><br/><br/><br/><br/><br/><br/>
+
+
+                            </div><<!-- /.intro -->
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </div><!-- /.container -->
+            <!--<footer>
+                <div class="container">
+
+                    <h4><center>Designed by Paulomi and Anvita</center</h4>
+
+                </div>
+            </footer>-->
+
+
+
+        </div><!-- /.header-wrapper-inner -->
+
+    </header>
+
+
+
+    <div class="main-content">
+
+        <section class="intro" style="background-color: white">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4 welcome-speech">
+                        <p><h2>Remember Everything</h2></p>
+                        <p><h5>Managing your daily data is just a click away</h5></p>
+                        <div class="form-group">
+                            <input ng-model="model.user.username"
+                                   style="background: transparent"
+                                   name="username"
+                                   type="text"
+                                   class="form-control transparent"
+                                   id="username"
+                                   required="required"
+                                   placeholder="Username">
+                        </div>
+
+                        <div class="form-group">
+                            <input ng-model="model.user.password"
+                                   style="background: transparent"
+                                   name="password"
+                                   type="password"
+                                   class="form-control transparent"
+                                   id="password"
+                                   required="required"
+                                   placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit"
+                                    id="submit"
+                                    name="submit"
+                                    class="form-control btn btn-orange left-align"
+                                    style="background-color: orange"
+                                    ng-click="model.login(model.user)">
+                                Sign In
+                            </button><br/>
+
+                            <div class="form-group"><br/>
+
+                                <a href="/auth/facebook">
+                                    <button
+
+                                            name="submit"
+                                            class="form-control btn btn-orange left-align"
+                                            style="background-color: #3b5998">
+                                        <span class="fa fa-facebook" style="color: white">FACEBOOK</span>
+                                    </button>
+                                </a>
+                                <br/>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group"><br/>
+                            <div><p>Do not have an account? <a href="#/register">SIGN UP</a></p></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7"><br/><br/>
+                        <div class="intro-description">
+                            <h2>Go from paper to process!</h2>
+                            <p>
+                                Go NoteSpace...
+                            </p>
+
+                            <ul class="points">
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    Notes is an arrangement of memory, which needs to be exercised and practised daily!
+                                </li>
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    It is not hard to compose, but what is fabulously hard is to leave the
+                                    superfluous notes under the table. Here is an easy way!
+                                </li>
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    Explore more into NoteSpace, or if you haven't, you are just a click away!
+                                </li>
+
+                            </ul> <!-- end of /.points -->
+
+                        </div> <!-- end of /.intro-description -->
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--  begin intro section -->
+
+        <section class="intro bg-light-gray">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="/project/client/assets/img/concept.png" class="img-responsive center-block" alt="intro">
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="intro-description">
+                            <h2>Create and Share everything everywhere!</h2>
+                            <p>
+                                Isn't it exciting that you can share any sort of data, in any form, to anyone?
+                                This is how NoteSpace works!
+                            </p>
+
+                            <ul class="points">
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    Create Notes and Notebooks, and associate them.
+                                </li>
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    Add any number of exciting widgets, e.g. Formatted text, Map, Attachments,
+                                    Images, Videos, Todo tasks.
+                                </li>
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    If its still not enough, share it with your friends and groups.
+                                </li>
+                                <li>
+                                            <span>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                    Collect all your ideas and thoughts, and save it forever
+                                </li>
+                            </ul> <!-- end of /.points -->
+
+                        </div> <!-- end of /.intro-description -->
+                    </div>
+                </div>
+            </div> <!-- end of /.container -->
+        </section>
+        <!--  end of intro section -->
+
+
+        <!--  begin feature section  -->
+        <section class="bg-white feature">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="feature-content text-center">
+                            <div class="feature-icon-box">
+                                <div class="feature-icon center-block">
+                                    <i class="fa fa-pencil-square-o "></i>
+                                </div>
+                            </div> <!--  end of /.feature-icon-box  -->
+                            <div class="feature-info">
+                                <h3 class="feature-heading">Create Notes and Notebooks</h3>
+
+                            </div> <!--   end of /.feature-info  -->
+                        </div> <!--  end of /.feature-content  -->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="feature-content text-center">
+                            <div class="feature-icon-box">
+                                <div class="feature-icon center-block">
+                                    <i class="fa fa-magic"></i>
+                                </div>
+                            </div> <!--  end of /.feature-icon-box  -->
+                            <div class="feature-info">
+                                <h3 class="feature-heading">Add fabulous widgets</h3>
+
+                            </div> <!--   end of /.feature-info  -->
+                        </div> <!--  end of /.feature-content  -->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="feature-content text-center">
+                            <div class="feature-icon-box">
+                                <div class="feature-icon center-block">
+                                    <i class="fa fa-star-half-o "></i>
+                                </div>
+                            </div> <!--  end of /.feature-icon-box  -->
+                            <div class="feature-info">
+                                <h3 class="feature-heading">Bookmark special notes</h3>
+
+                            </div> <!--   end of /.feature-info  -->
+                        </div> <!--  end of /.feature-content  -->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="feature-content text-center">
+                            <div class="feature-icon-box">
+                                <div class="feature-icon center-block">
+                                    <i class="fa fa-share-alt-square"></i>
+                                </div>
+                            </div> <!--  end of /.feature-icon-box  -->
+                            <div class="feature-info">
+                                <h3 class="feature-heading">Share your ideas and work</h3>
+
+                            </div> <!--   end of /.feature-info  -->
+                        </div> <!--  end of /.feature-content  -->
+                    </div>
+
+                </div>
+            </div> <!-- end of /.container -->
+        </section>
+        <!--   end of feature section  -->
+
+        <!--  begin portfolio section  -->
+        <section class="bg-light-gray">
+            <div class="container">
+
+                <div class="headline text-center">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h2 class="section-title" style="color: darkorange">show off your widgets</h2>
+                            <p class="section-sub-title">
+                                absolutely stunning functionality &amp; Easy to use
+                            </p> <!-- /.section-sub-title --><br/>
+                            <div class="form-group">
+                                <a href="#/login">
+                                    <button class=" btn btn-orange center-align"
+                                            style="background-color: orange" on>
+                                        TRY NOW
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.headline -->
+
+                <div class="portfolio-item-list">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+                                <div class="item-image">
+                                    <a href="#/login">
+                                        <img src="/project/client/assets/img/text.png" class="img-responsive center-block" alt="portfolio1">
+                                        <div><span><i class="fa fa-plus"></i></span></div>
+                                    </a>
+                                </div>
+
+                                <div class="item-description">
+                                    <div class="row">
+                                        <div >
+                                                    <span class="item-name">
+                                                        Style your text with Wiziwig Editor
+                                                    </span>
+                                                    <span>
+                                                        TEXT
+                                                    </span>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of /.item-description -->
+                            </div> <!-- end of /.portfolio-item -->
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+                                <div class="item-image">
+                                    <a href="#/login">
+                                        <img style="height: 300px" src="/project/client/assets/img/map.png" class="img-responsive center-block" alt="portfolio2">
+                                        <div><span><i class="fa fa-plus"></i></span></div>
+                                    </a>
+                                </div>
+
+                                <div class="item-description">
+                                    <div class="row">
+                                        <div>
+                                                    <span class="item-name">
+                                                        Spot your actions on the globe
+                                                    </span>
+                                                    <span>
+                                                        MAPS
+                                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end of /.item-description -->
+                            <!-- end of /.portfolio-item -->
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+
+                                <div class="item-image">
+                                    <a href="#/login">
+                                        <img style="height: 300px; width: 300px"src="/project/client/assets/img/attachment.png" class="img-responsive center-block" alt="portfolio3">
+                                        <div><span><i class="fa fa-plus"></i></span></div>
+                                    </a>
+                                </div>
+
+                                <div class="item-description">
+                                    <div class="row">
+                                        <div>
+                                                    <span class="item-name">
+                                                       Send any document easily
+                                                    </span>
+                                                    <span>
+                                                        ATTACHMENTS
+                                                    </span>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of /.item-description -->
+                            </div> <!-- end of /.portfolio-item -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+                                <div class="item-image">
+                                    <a href="#/login">
+                                        <img style="height: 300px"src="/project/client/assets/img/image.jpg" class="img-responsive center-block" alt="portfolio4">
+                                        <div><span><i class="fa fa-plus"></i></span></div>
+                                    </a>
+                                </div>
+
+                                <div class="item-description">
+                                    <div class="row">
+                                        <div>
+                                                    <span class="item-name">
+                                                        Capture any information
+                                                    </span>
+                                                    <span>
+                                                        IMAGES
+                                                    </span>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of /.item-description -->
+                            </div> <!-- end of /.portfolio-item -->
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+                                <div class="item-image">
+                                    <a href="#/login">
+                                        <img style="height: 300px"src="/project/client/assets/img/todo.png" class="img-responsive center-block" alt="portfolio5">
+                                        <div><span><i class="fa fa-plus"></i></span></div>
+                                    </a>
+                                </div>
+
+                                <div class="item-description">
+                                    <div class="row">
+                                        <div>
+                                                    <span class="item-name">
+                                                        Remember everything you have to do
+                                                    </span>
+                                                    <span>
+                                                        TODO LIST
+                                                    </span>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of /.item-description -->
+                            </div> <!-- end of /.portfolio-item -->
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+                                <div class="item-image">
+                                    <a href="#/login">
+                                        <img style="height: 300px"src="/project/client/assets/img/video.ico" class="img-responsive center-block" alt="portfolio6">
+                                        <div><span><i class="fa fa-plus"></i></span></div>
+                                    </a>
+                                </div>
+
+                                <div class="item-description">
+                                    <div class="row">
+                                        <div>
+                                                    <span class="item-name">
+                                                        Your notes can even contain Videos!
+                                                    </span>
+                                                    <span>
+                                                        VIDEOS
+                                                    </span>
+                                        </div>
+
+                                    </div>
+                                </div> <!-- end of /.item-description -->
+                            </div> <!-- end of /.portfolio-item -->
+                        </div>
+
+                    </div>
+                    <!-- end of portfolio-item-list -->
+
+                </div>
+        </section>
+        <!--   end of portfolio section  -->
+
+        <!-- begin twitter-feed section -->
+        <section class="twit-feed">
+            <div class="twit-feed-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div id="twit" class="owl-carousel owl theme">
+
+                                <div class="items text-center">
+                                    <div class="twit-content">
+                                        <div class="twit-icon">
+                                            <i class="fa fa-money"></i>
+                                        </div>
+                                        <h3 class="text-capitalize">Free access anywhere!</h3>
+                                        <h3>
+                                            All features of NoteSpace and absolutely free and fun to try.
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <div class="items text-center">
+                                    <div class="twit-content">
+                                        <div class="twit-icon">
+                                            <i class="fa fa-puzzle-piece"></i>
+                                        </div>
+                                        <h3 class="text-capitalize"> Enjoy more variety of features!</h3>
+                                        <h3> NoteSpace gives you more variety of widgets to share your data in the most
+                                            accurate and expressive manner.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="items text-center">
+                                    <div class="twit-content">
+                                        <div class="twit-icon">
+                                            <i class="fa fa-group"></i>
+                                        </div>
+                                        <h3 class="text-capitalize">Easy to share and maintain your data!</h3>
+                                        <h3> With NoteSpace you can always send myraid type of data integrated
+                                            in a note to your friends in a click!</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   end of /.twit-feed section  -->
+
+
+        <section style="background-color: black">
+                <div class="container">
+                    <h4><center>Designed by Paulomi and Anvita</center</h4>
+                </div>
+        </section>
+
+    </div> <!-- end of /.main-content -->
+
+
+    <script type="text/javascript">
+        $(function() {
+
+            $('.portfolio-item > .item-image').each( function() { $(this).hoverdir({
+                hoverDelay : 75
+            }); } );
+
+        });
+    </script>
+
+
+    <!-- script for twitter-feed using owl carousel-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#twit").owlCarousel({
+
+                navigation : true, // Show next and prev buttons
+                slideSpeed : 100,
+                paginationSpeed : 400,
+                navigationText : false,
+                singleItem: true,
+                autoPlay: true,
+                pagination: false
+            });
+
+        });
+    </script>
+
+
+    <!-- script for testimonial section using owl carousel -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#client-speech").owlCarousel({
+
+                autoPlay: 5000, //Set AutoPlay to 3 seconds
+                stopOnHover: true,
+                singleItem:true
+            });
+
+        });
+    </script>
+
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>
+
+
+
+
+</div> <!-- end of /#home-page -->
