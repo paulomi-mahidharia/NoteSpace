@@ -137,8 +137,10 @@ module.exports = function (app, NoteModel) {
 
         //Append the file extension at the end of randomly generated filename
         var file = filename+"."+extension;
+        console.log(file);
 
         var newpath = path+"."+extension;
+        console.log(newpath);
 
         //Rename the file path
         fs.rename(path, newpath);
