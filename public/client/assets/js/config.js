@@ -151,7 +151,7 @@
                 }
             })
             .when("/notebook", {
-                templateUrl: "views//notebook/notebook.view.html",
+                templateUrl: "views/notebook/notebook.view.html",
                 controller: "noteBookController",
                 controllerAs: "model",
                 resolve: {

@@ -179,7 +179,7 @@ module.exports = function (app, NoteModel) {
                 .then(
                     function(note) {
 
-                        res.redirect("/project/client/#/editnote/"+noteId);
+                        res.redirect("/#/editnote/"+noteId);
                     },
                     function(err) {
                         res.status(400).send(err);
@@ -195,7 +195,7 @@ module.exports = function (app, NoteModel) {
                 .then(
                     function(note) {
 
-                        res.redirect("/project/client/#/editnote/"+noteId);
+                        res.redirect("/#/editnote/"+noteId);
                     },
                     function(err) {
                         res.status(400).send(err);
