@@ -149,7 +149,7 @@ module.exports = function (app, NoteModel) {
             var widget = {
                 widgetType: "UPLOAD",
                 upload: {
-                    url: "/uploads/"+file, //originalname;
+                    url: "/public/uploads/"+file, //originalname;
                     name: originalname
                 }
             };
