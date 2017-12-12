@@ -52,8 +52,8 @@ module.exports = function(app, UserModel, NoteModel, uuid){
     app.get   ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
     app.get('/auth/facebook/callback',
          passport.authenticate('facebook', {
-             successRedirect: '/project/client/#/profile',
-             failureRedirect: '/project/client/#/login'
+             successRedirect: '/../../client/#/profile',
+             failureRedirect: '/../../client/#/login'
          }
          )
     );
