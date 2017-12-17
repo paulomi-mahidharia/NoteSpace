@@ -7,7 +7,8 @@ module.exports = function (app, NoteModel) {
     //var applicationModel = model.applicationModel;
 
     var multer  = require('multer');
-    var upload = multer({ dest: __dirname+'/../../client/uploads' });
+    // var upload = multer({ dest: __dirname+'/../../client/uploads' });
+    var upload = multer({ dest: '/app/public/client/uploads' });
 
     app.post("/api/project/note/:noteId/widget", createWidget);
 
@@ -123,7 +124,6 @@ module.exports = function (app, NoteModel) {
         var widgetType    = req.body.widgetType;
 
         var myFile        = req.file;
-        console.log(myFile);
 
         var destination   = myFile.destination;
         var path          = myFile.path;
