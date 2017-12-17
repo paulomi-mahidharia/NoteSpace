@@ -7,7 +7,7 @@ module.exports = function (app, NoteModel) {
     //var applicationModel = model.applicationModel;
 
     var multer  = require('multer');
-    var upload = multer({ dest: '../../client/uploads' });
+    var upload = multer({ dest: './../../client/uploads' });
 
     app.post("/api/project/note/:noteId/widget", createWidget);
 
