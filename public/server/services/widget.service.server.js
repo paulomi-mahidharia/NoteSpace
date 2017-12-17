@@ -123,6 +123,7 @@ module.exports = function (app, NoteModel) {
         var widgetType    = req.body.widgetType;
 
         var myFile        = req.file;
+        console.log(myFile);
 
         var destination   = myFile.destination;
         var path          = myFile.path;
