@@ -62,7 +62,7 @@
                         var videoURLs =[];
 
                         for(var i in videos){
-                            videoURLs.push("http://www.youtube.com/embed/"+videos[i].id.videoId);
+                            videoURLs.push("https://www.youtube.com/embed/"+videos[i].id.videoId);
                         }
 
                         document.getElementById('searchResults').style.display = 'inline';
